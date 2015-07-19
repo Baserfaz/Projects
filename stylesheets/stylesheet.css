@@ -71,18 +71,23 @@ hr {
 	background-color: rgba(255, 255, 255, 0);
 }
 
+.fa {
+	color: #eee;
+}
+
 a:hover {
 	text-decoration: underline;
 }
 
 .main {
+	margin: 2em 0;
 	min-height: 100%;
 	background-image: url(../images/scaleb.png);
 }
 
 .container {
 	position: relative;
-	top: 2em;
+	/*top: 2em;*/
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -101,6 +106,7 @@ a:hover {
 .footer {
 	padding: 1em;
 	font-size: 1em;
+	line-height: 1.5;
 }
 
 .footer p, a{
@@ -119,16 +125,25 @@ a:hover {
 }
 
 .content p {
-	padding: 0 0 1em 1em;
+	padding: 1em 0 1em 2em;
 }
 
 .content a {
 	padding-right: 5px;
 	color: #aeb;
+	padding: 0 0 1em 4em;
 }
 
 .content h2 {
 	font-size: 1.5em;
 }
 
+.content h3 {
+	font-size: 1em;
+	color: rgba(255, 255, 255, 0.25);
+}
+
+.ack {
+	font-size: 0.75em;
+}
 
