@@ -116,7 +116,6 @@ a:hover {
 }
 
 .footer a {
-	padding-right: 5px;
 	color: #aeb;
 }
 
@@ -131,7 +130,6 @@ a:hover {
 .content a {
 	padding-right: 5px;
 	color: #aeb;
-	padding: 0 0 1em 4em;
 }
 
 .content h2 {
