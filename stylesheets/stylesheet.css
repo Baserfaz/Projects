@@ -123,6 +123,10 @@ a:hover {
 	line-height: 1.5;
 }
 
+.content img {
+	padding: 1em 0 1em 2em;
+}
+
 .content p {
 	padding: 1em 0 1em 2em;
 }
