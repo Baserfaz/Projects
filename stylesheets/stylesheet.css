@@ -53,7 +53,7 @@ table {
     src: url(../font/opensans.ttf);
 }
 
-h1, h2, h3, h4, h5, h6, p, a, i {
+h1, h2, h3, h4, h5, h6, p, a, i , li {
 	font-family: opensans;
 	color: #eee;
 }
@@ -123,26 +123,47 @@ a:hover {
 	line-height: 1.5;
 }
 
+.content ul {
+	list-style-type: square;
+	margin-left: 5em;
+}
+
+.content ul li {
+	color: #eee;
+	font-family: opensans;
+}
+
 .content img {
-	padding: 1em 0 1em 2em;
+	margin: 2em;
+	padding: 1em;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .content p {
 	padding: 1em 0 1em 2em;
+	font-family: opensans;
 }
 
 .content a {
-	padding-right: 5px;
 	color: #aeb;
+	font-family: opensans;
 }
 
 .content h2 {
 	font-size: 1.5em;
+	font-family: opensans;
 }
 
 .content h3 {
+	font-size: 1.25em;
+	font-family: opensans;
+	padding-left: 2rem;
+}
+
+.content h4 {
 	font-size: 1em;
 	color: rgba(255, 255, 255, 0.25);
+	font-family: opensans;
 }
 
 .ack {
