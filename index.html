@@ -12,10 +12,10 @@
       maximum-scale=1
     "
 	/>
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chivo:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/unsemantic.css">
-	<link rel="stylesheet" href="fa/css/font-awesome.min.css">
+	  <link rel="stylesheet" type="text/css" href="stylesheets/unsemantic.css">
+	  <link rel="stylesheet" href="fa/css/font-awesome.min.css">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -27,70 +27,85 @@
 
 			<!-- Header -->
 			<div class="grid-100 header">
-				<h1>MY<br>PRO<br>JECTS</h1>
-				<hr>
+			    <h1>MY<br>PRO<br>JECTS</h1>
+			    <hr>
 			</div>
 
 			<!-- content -->
-			<div class="grid-100 content">
-			<h2>Singleplayer roguelike RPG using Unity3D 5.5 and C#</h2>
-				<h4>Project name: Roguelike (name not yet decided)</h4>
-				<img src="https://raw.githubusercontent.com/Baserfaz/Projects/gh-pages/images/roguelite_img_1.PNG" alt="Screenshot of the game." height="600" width="auto"></img>
+			<div class="grid-100 grid-parent content">
 
-				<h3>Introduction</h3>
+        <div class="grid-100 project-name">
+			    <h2>Singleplayer roguelike RPG using Unity3D 5.5 and C#</h2>
+			    <p class="shady">Project name: Roguelike (name not yet decided)</p>
+        </div>
 
-				<p>This game is a roguelike RPG, where the player dwells in randomly generated dungeons slaying monsters, gathering loot and trying to survive.
-				It's in very early stage, where some basic stuff, such as dungeon generation, are implemented.</p>
+        <div class="grid-50">
+  				<h3>Introduction</h3>
 
-				<h3>Current status</h3>
+  				<p>This game is a roguelike RPG, where the player dwells in randomly generated dungeons slaying monsters, gathering loot and trying to survive.
+  				It's in very early stage, where some basic stuff, such as dungeon generation, are implemented.</p>
 
-				<p>Several things are implemented:</p>
-				<ul>
-					<li>Random dungeon generation: Generates dungeon layouts automatically (width, height, openness)</li>
-					<li>Tilesystem: Creates seamless graphics using tilesystem.</li>
-					<li>Basic AI: Enemies follow player and use melee attacks.</li>
-                    <li>Line of sight system: Walls, actors, doors etc. block player's LoS.</li>
-					<li>Image to dungeon generator: Generates dungeons and special rooms using hand drawn images. Supports all mechanics such as doors, walls, enemies, items etc.</li>
-					<li>Special rooms: With img to dungeon system you can create your own dungeon layouts. For example shops, boss rooms, monster closets etc.</li>
-                    <li>Loot rarity mechanics/probability calculations: Items come in four different levels (normal, magical, rare, legendary).</li>
-					<li>Exp system: background work is done.</li>
-					<li>Pixelart graphics: Tiles are 16x16 and are created by hand using Pyxel edit software.</li>
-					<li>Player has slots for armor, weapon, spell and usable items (such as potions).</li>
-					<li>Gameplay styles: Survive in the dungeon by using melee, casting spells and using items. (melee, spells, throw?)</li>
-          <li>Armor degenerates when damage taken: You have to search for armor constantly.</li>
-          <li>Crude GUI.</li>
-          <li>Traps: Floor spikes that hurt actors and leave a status effect (bleed).</li>
-          <li>Crude/basic experience system: Player gain exp by killing enemies.</li>
-          <li>Keypad and Mouse input: Can play with mouse and keyboard.</li>
-          <li>Mouse GUI: Can click/hover on GUI elements.</li>
-          <li>Effect system: Allows heal/damage/buffs/debuffs over time for all actors in the dungeon.</li>
-				</ul>
+  				<h3>Current status</h3>
 
-				<p>These things are under development:</p>
-				<ul>
-					<li>More weapons, spells, usable items.</li>
-          <li>Summoning spells, mines, create walls, dig down (i.e. using shovel), ankth (respawn)</li>
-					<li>Item throwing?</li>
-					<li>Effects and animations.</li>
-					<li>Different enemy types and more diverse enemy behaviour.</li>
-          <li>Flying enemies (can fly over walls?)</li>
-          <li>Slow projectiles?</li>
-					<li>More diverse array of special rooms.</li>
-					<li>Background story.</li>
-					<li>Better menus and death screens. Statistics etc.</li>
-					<li>Sound effects.</li>
-					<li>Character selection: Player can select from premade characters, who all have different starting gear and conditions.</li>
-          <li>Persistance: Chance to find a bank room or something similar.</li>
-          <li>Polished sprites</li>
-          <li>Randomized effects on each dungeon level: For example chance to do double damage or ignite actors.</li>
-				</ul>
-				<br>
-				<h3>Where can I get it?</h3>
+  				<p>Several things are implemented:</p>
 
-				<p>Code is freely available as open source: <a href="https://github.com/Baserfaz/Roguelike">here</a>.
-                <br>Playable build can be downloaded <a href="https://github.com/Baserfaz/Roguelike/raw/master/Builds/Roguelike.zip">here</a>.</p>
-				<hr class="hr2">
+  				<ul>
+  					<li>Random dungeon generation: Generates dungeon layouts automatically (width, height, openness)</li>
+  					<li>Tilesystem: Creates seamless graphics using tilesystem.</li>
+  					<li>Basic enemy AI: Enemies follow player and use melee attacks.</li>
+            <li>Line of sight system: Walls, actors, doors etc. block player's LoS.</li>
+  					<li>Image to dungeon generator: Generates dungeons and special rooms using hand drawn images. Supports all mechanics such as doors, walls, enemies, items etc.</li>
+  					<li>Special rooms: With img to dungeon system you can create your own dungeon layouts. For example shops, boss rooms, monster closets etc.</li>
+            <li>Loot rarity mechanics/probability calculations: Items come in four different levels (normal, magical, rare, legendary).</li>
+  					<li>Exp system: background work is done.</li>
+  					<li>Pixelart graphics: Tiles are 16x16 and are created by hand using Pyxel edit software.</li>
+  					<li>Player has slots for armor, weapon, spell and usable items.</li>
+            <li>Traps: Floor spikes that hurt actors.</li>
+            <li>Basic experience system: Player gain exp by killing enemies.</li>
+            <li>Keypad and Mouse input: Can play with mouse and keyboard.</li>
+            <li>Mouse GUI: Can click/hover on GUI elements.</li>
+            <li>Effect system: Allows heal/damage/buffs/debuffs over time for all actors in the dungeon.</li>
+            <li>Pathfinding: Breadth-first search, needs to be upgraded to A*.</li>
+  				</ul>
+
+  				<p>These things are under development:</p>
+
+  				<ul>
+  					<li>More weapons, spells, usable items.</li>
+            <li>Summoning spells, mines, create walls, dig down (i.e. using shovel), ankth (respawn)</li>
+  					<li>Item throwing?</li>
+  					<li>Effects and animations.</li>
+  					<li>Different enemy types and more diverse enemy behaviour.</li>
+            <li>Flying enemies (can fly over walls?)</li>
+            <li>Slow projectiles?</li>
+  					<li>More diverse array of special rooms.</li>
+  					<li>Background story.</li>
+  					<li>Sound effects/music.</li>
+  					<li>Character selection: Player can select from premade characters, who all have different starting gear and conditions.</li>
+            <li>Persistance: Chance to find a bank room or something similar.</li>
+            <li>Polished sprites</li>
+            <li>Randomized effects on each dungeon level: For example chance to do double damage or ignite actors.</li>
+  				</ul>
+  				<br>
+
+          <hr class="hr2">
+  				<h3>Where can I get it?</h3>
+  				<p>Code is freely available as open source: <a href="https://github.com/Baserfaz/Roguelike">here</a>.
+          <br>Playable build can be downloaded <a href="https://github.com/Baserfaz/Roguelike/raw/master/Builds/Roguelike.zip">here</a>.</p>
+  				<hr class="hr2">
+        </div>
+
+        <div class="grid-50 project-image">
+          <!--<img src="https://raw.githubusercontent.com/Baserfaz/Projects/gh-pages/images/roguelite_img_1.PNG" alt="Screenshot of the game."></img>-->
+          <img src="images/roguelite_img_1.PNG" alt="Screenshot of the game."></img>
+          <img src="images/roguelite_img_2.PNG" alt="Screenshot of the game."></img>
+          <img src="images/roguelite_img_3.PNG" alt="Screenshot of the game."></img>
+          <img src="images/roguelite_img_4.PNG" alt="Screenshot of the game."></img>
+        </div>
+
 			</div>
+
+
 
 			<div class="grid-100 content">
 				<h2>Older projects</h2>
@@ -106,7 +121,7 @@
 				<a href="https://github.com/Baserfaz" target="_blank"><i class="fa fa-github fa-fw"></i> Me on GitHub</a><br>
 				<a href="https://twitter.com/Baserfaz" target="_blank"><i class="fa fa-twitter fa-fw"></i> @Baserfaz</a><br>
 				<a href="http://www.twitch.tv/baserfaz" target="_blank"><i class="fa fa-twitch fa-fw"></i> Twitch</a>
-				<p class="ack">Background from <a href="http://www.subtlepatterns.com">Subtlepatterns.com</a> & Using <a href="http://unsemantic.com/">Unsemantic</a> framework</p>
+				<p class="ack">Background from <a href="http://www.subtlepatterns.com">Subtlepatterns.com</a> &amp; Using <a href="http://unsemantic.com/">Unsemantic</a> framework</p>
 			</div>
 
 		</div>
