@@ -111,11 +111,10 @@ a:hover {
 }
 
 .footer a {
-	color: #aeb;
+	color: #E08711;
 }
 
 .project-name {
-	margin-bottom: 1em;
 }
 
 .content {
@@ -133,6 +132,14 @@ a:hover {
 	color: #eee;
 }
 
+.big::before {
+	content: "" !important;
+}
+
+.big {
+	color: #e08711 !important;
+}
+
 .content ul li::before {
 	content: ">> ";
 	color: #e08711;
@@ -147,11 +154,11 @@ a:hover {
 }
 
 .content p {
-	padding: 1em 0 1em 0em;
 }
 
 .content a {
-	color: #aeb;
+	/*color: #aeb;*/
+	color: #E08711;
 }
 
 .content h2 {
@@ -160,6 +167,8 @@ a:hover {
 
 .content h3 {
 	font-size: 1.25em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .shady {

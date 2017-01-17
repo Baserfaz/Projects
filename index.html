@@ -35,7 +35,7 @@
 			<div class="grid-100 grid-parent content">
 
         <div class="grid-100 project-name">
-			    <h2>Singleplayer roguelike RPG using Unity3D 5.5 and C#</h2>
+			    <h2>Roguelike RPG</h2>
 			    <p class="shady">Project name: Roguelike (name not yet decided)</p>
         </div>
 
@@ -45,47 +45,74 @@
   				<p>This game is a roguelike RPG, where the player dwells in randomly generated dungeons slaying monsters, gathering loot and trying to survive.
   				It's in very early stage, where some basic stuff, such as dungeon generation, are implemented.</p>
 
+          </br>
+
+          <p>Game is created by using Unity3D 5.5 and C#. Graphics are done with Pyxel.edit drawing software.</p>
+
   				<h3>Current status</h3>
 
-  				<p>Several things are implemented:</p>
-
   				<ul>
+            <li class="big">Main Features</li>
   					<li>Random dungeon generation: Generates dungeon layouts automatically (width, height, openness)</li>
   					<li>Tilesystem: Creates seamless graphics using tilesystem.</li>
+            <li>Line of sight system</li>
+            <li>Image parser: Generates dungeons and special rooms using hand drawn images. Supports all mechanics such as doors, walls, enemies, items etc.</li>
+
+            </br>
+
+            <li class="big">Graphics</li>
+            <li>Pixelart graphics: Tiles are 16x16 (might get converted to 32x32) and are created by hand using Pyxel edit software.</li>
+
+            </br>
+
+            <li class="big">Actors</li>
   					<li>Basic enemy AI: Enemies follow player and use melee attacks.</li>
-            <li>Line of sight system: Walls, actors, doors etc. block player's LoS.</li>
-  					<li>Image to dungeon generator: Generates dungeons and special rooms using hand drawn images. Supports all mechanics such as doors, walls, enemies, items etc.</li>
-  					<li>Special rooms: With img to dungeon system you can create your own dungeon layouts. For example shops, boss rooms, monster closets etc.</li>
-            <li>Loot rarity mechanics/probability calculations: Items come in four different levels (normal, magical, rare, legendary).</li>
-  					<li>Exp system: background work is done.</li>
-  					<li>Pixelart graphics: Tiles are 16x16 and are created by hand using Pyxel edit software.</li>
-  					<li>Player has slots for armor, weapon, spell and usable items.</li>
-            <li>Traps: Floor spikes that hurt actors.</li>
-            <li>Basic experience system: Player gain exp by killing enemies.</li>
+            <li>Player has slots for armor, weapon, spell and usable items.</li>
+            <li>Enemy types: normal melee, flying enemies (can't trigger traps), static enemies (immovable).</li>
+            <li>Bosses: special spell combinations.</li>
+
+            </br>
+
+            <li class="big">GUI and input</li>
             <li>Keypad and Mouse input: Can play with mouse and keyboard.</li>
             <li>Mouse GUI: Can click/hover on GUI elements.</li>
+            <li>Spell range and spell AOE: Show valid tiles.</li>
+            <li>Pathfinding: Uses A* search algorithm.</li>
+
+            </br>
+
+            <li class="big">Gameplay related features</li>
+            <li>Special rooms: With img to dungeon system you can create your own dungeon layouts. For example shops, boss rooms, monster closets etc.</li>
+            <li>Loot rarity mechanics/probability calculations: Items come in four different levels (normal, magical, rare, legendary).</li>
+            <li>Exp system: Standard leveling system.</li>
+            <li>Traps: Floor spikes that hurt actors.</li>
             <li>Effect system: Allows heal/damage/buffs/debuffs over time for all actors in the dungeon.</li>
-            <li>Pathfinding: Breadth-first search, needs to be upgraded to A*.</li>
+
   				</ul>
 
-  				<p>These things are under development:</p>
+          <h3>Under development</h3>
 
   				<ul>
-  					<li>More weapons, spells, usable items.</li>
-            <li>Summoning spells, mines, create walls, dig down (i.e. using shovel), ankth (respawn)</li>
-  					<li>Item throwing?</li>
+            <li class="big">Content</li>
+  					<li>Bigger pool of items: such as weapons, armor, potions etc.</li>
+            <li>More status elements: buffs, debuffs etc.</li>
+            <li>Spells: Summoning spells, mines, create walls, dig down (i.e. using shovel), ankth (respawn).</li>
   					<li>Effects and animations.</li>
   					<li>Different enemy types and more diverse enemy behaviour.</li>
-            <li>Flying enemies (can fly over walls?)</li>
-            <li>Slow projectiles?</li>
-  					<li>More diverse array of special rooms.</li>
-  					<li>Background story.</li>
-  					<li>Sound effects/music.</li>
-  					<li>Character selection: Player can select from premade characters, who all have different starting gear and conditions.</li>
+            <li>More diverse array of special rooms.</li>
+            <li>Sound effects/music.</li>
+            <li>Character selection: Player can select from premade characters, who all have different starting gear and conditions.</li>
+            <li>Polished sprites.</li>
+            <li>Background story.</li>
+
+            </br>
+
+            <li class="big">Gameplay changes</li>
+            <li>Slow projectiles.</li>
             <li>Persistance: Chance to find a bank room or something similar.</li>
-            <li>Polished sprites</li>
             <li>Randomized effects on each dungeon level: For example chance to do double damage or ignite actors.</li>
   				</ul>
+
   				<br>
 
           <hr class="hr2">
