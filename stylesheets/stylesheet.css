@@ -186,3 +186,9 @@ a:hover {
 .ack {
 	font-size: 0.75em;
 }
+
+.caption {
+	color: rgba(255, 255, 255, 0.25);
+	font-style: italic;
+	margin-bottom: 1em;
+}
