@@ -153,12 +153,21 @@ a:hover {
 	width: 100%;
 }
 
-.content p {
+#project_selector {
+	margin-bottom: 1rem;
+}
+
+#project_selector li:hover {
+	cursor: pointer;
 }
 
 .content a {
 	/*color: #aeb;*/
 	color: #E08711;
+}
+
+.content p {
+	margin-bottom: 1rem;
 }
 
 .content h2 {

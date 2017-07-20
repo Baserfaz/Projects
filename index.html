@@ -1,177 +1,257 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-	<meta
-    name="viewport"
-    content="
-      width=device-width,
-      initial-scale=1,
-      minimum-scale=1,
-      maximum-scale=1
-    "
-	/>
-    <link href='https://fonts.googleapis.com/css?family=Chivo:300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-	  <link rel="stylesheet" type="text/css" href="stylesheets/unsemantic.css">
-	  <link rel="stylesheet" href="fa/css/font-awesome.min.css">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Projects by Heikki Heiskanen</title>
-  </head>
+<html lang=en>
+  	<head>
+		<meta charset='utf-8'>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="viewport" content=" width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 
-  <body class="main">
+		<title>Projects by Heikki Heiskanen</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Chivo:300,400' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/unsemantic.css">
+		<link rel="stylesheet" href="fa/css/font-awesome.min.css">
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/script.js"></script>
+
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+  	</head>
+
+  	<body class="main">
 		<div class="grid-container container">
 
 			<!-- Header -->
 			<div class="grid-100 header">
-			    <h1>MY<br>PRO<br>JECTS</h1>
-			    <hr>
+				<h1>Baserfaz' projects</h1>
+				<hr>
 			</div>
 
-			<!-- content -->
-			<div class="grid-100 grid-parent content">
+			<div class="grid-30 content" id="project_selector">
+				<h2>Choose project:</h2>
+				<ul>
+					<li id="show_project_02"><a>Adventurer - (Java)</a></li>
+					<li id="show_project_01"><a>Roguelite RPG - (Unity)</a></li>
+					<li><a href="https://github.com/Baserfaz?tab=repositories" target="_blank">Old projects</a></li>
+				</ul>
+				<hr class="hr2">
+			</div>
 
-        <div class="grid-100 project-name">
-			    <h2>Roguelike RPG</h2>
-			    <p class="shady">Project name: Roguelike (name not yet decided)</p>
-        </div>
+			<div class="grid-100 grid-parent content" id="project02">
+					
+				<div class="grid-100 project-name">
+					<h2>Adventurer - roguelike RPG - Java game</h2>
+					<p class="shady">Project name: Adventurer</p>
+					<p class="shady">Version: extremely early</p>
+				</div>
 
-        <div class="grid-50">
-  				<h3>Introduction</h3>
+				<div class="grid-50">
+					<h3>Introduction</h3>
 
-  				<p>This game is a roguelike RPG, where the player dwells in randomly generated dungeons slaying monsters, gathering loot and trying to survive.
-  				It's in very early stage, where some 'basic' stuff, such as rough dungeon generation, are implemented.</p>
+					<p style="color: green">Project is in active development as of 20.7.2017.</p>
 
-          </br>
+					<p>
+						Adventurer is looks and feels like an old roguelike game. Therefore it has simplistic graphics and GUI. 
+						The goal is to create a roguelike experience but with some persistency.
+						Control schema is copied from the older roguelike games. You move and attack with the same keys.
+						Attacking happens when player "bumps" into an enemy.  
+					</p>
 
-          <p>Game is created by using Unity3D 5.5 and C#. Graphics are done with Pyxel.edit.</p>
+					<p>
+						The game is created using Java and it's written 100% without any java game libraries.
+						This means that it uses custom 2D game engine, that I build.
+						At the moment the engine is not ready and it's still in development.
+					</p>
 
-  				<h3>Current status</h3>
+					<h3>Current status</h3>
 
-  				<ul>
-            <li class="big">Main Features</li>
-  					<li>Random dungeon generation: Generates dungeon layouts automatically. Multiple algorithms, which are pretty rough though.</li>
-  					<li>Tilesystem: Creates seamless graphics using a tilesystem.</li>
-            <li>Line of sight system</li>
-            <li>Image parser: Generates dungeons and special rooms using hand drawn images. Supports all mechanics such as doors, walls, enemies, items etc.</li>
+  					<ul>
+            			<li class="big">Main Features</li>
+						<li>Procedural dungeon generation: creates rooms and connects them with a continuous maze. 
+							Doors are generated to connect these two.
+						</li>
+						<li>Procedural maze generation: uses modified backtracking algorithm.</li>
+						<li>Tile and room-systems: World consists of rooms, which then consist of tiles.</li>
+						<li>Visibility determination: all actors use Bresenham's line algorithm in determinating line of sight.</li>
+						<li>Enemy pathfinding: uses A* algorithm.</li>
+						<li>Load data from XML-files: item and actor data is read and written in XML-format.</li>
+						<li>Enemy AI: enemies follow the player when they are alerted. Also they can attack both in melee and ranged.</li>
+					</ul>
 
-            </br>
+					<h3>Under development</h3>
+					<ul>
+						<li class="big">Engine</li>
+						<li>Engine is far from ready and it is developed parallel to Adventurer.</li>
 
-            <li class="big">Graphics</li>
-            <li>Pixelart graphics: Tiles are 16x16 (might get converted to 32x32) and are created by hand using Pyxel edit software.</li>
+						</br>
 
-            </br>
+						<li class="big">Adventurer - near future</li>
+						<li>Chests &amp; keys</li>
+						<li>Re-implement locked doors.</li>
+						<li>Fix multiple bugs.</li>
+						<li>Main menu &amp; death-screens.</li>
+						<li>Obviously more content (items, enemies, bosses etc.)</li>
+						<li>Much much more...</li>
+					</ul>
 
-            <li class="big">Tech</li>
-            <li>Smooth movement &amp; attack: uses vector.lerp.</li>
-            <li>Every actor moves on their own turn.</li>
-            <li>"Gamejuice": screenshake, lerps etc.</li>
+					<hr class="hr2">
+  					<h3>Where can I get it?</h3>
+  					<p>Code is freely available as open source: <a href="https://github.com/Baserfaz/Adventurer">here</a>
+          			<br>Playable build can be downloaded <a href="https://github.com/Baserfaz/Adventurer/archive/master.zip">here</a>
+					<br>(Demo can be found in builds folder.)</p>
+					<hr class="hr2">
 
-            </br>
+				</div>
 
-            <li class="big">Audio</li>
-            <li>Added rudimentary soundeffects: used <a href="http://www.bfxr.net/">bfxr</a></li>
-
-            </br>
-
-            <li class="big">Actors</li>
-  					<li>Basic enemy AI: Enemies follow player and use melee attacks.</li>
-            <li>Player has slots for armor, weapon, spell and usable items.</li>
-            <li>Enemy types: normal melee, flying enemies (can't trigger traps), static enemies (immovable).</li>
-            <li>Bosses: special spell combinations.</li>
-
-            </br>
-
-            <li class="big">GUI and input</li>
-            <li>Keypad and Mouse input: Can play with mouse and keyboard.</li>
-            <li>Mouse GUI: Can click/hover on GUI elements.</li>
-            <li>Spell range and spell AOE: Show valid tiles.</li>
-            <li>Player pathfinding: Uses A* search algorithm.</li>
-
-            </br>
-
-            <li class="big">Gameplay related features</li>
-            <li>Special rooms: With img to dungeon system you can create your own dungeon layouts. For example shops, boss rooms, monster closets etc.</li>
-            <li>Loot rarity mechanics/probability calculations: Items come in four different levels (normal, magical, rare, legendary).</li>
-            <li>Exp system: Standard leveling system.</li>
-            <li>Traps: Floor spikes that hurt actors.</li>
-            <li>Effect system: Allows heal/damage/buffs/debuffs over time for all actors in the dungeon.</li>
-
-  				</ul>
-
-          <h3>Under development</h3>
-
-  				<ul>
-            <li class="big">Content</li>
-  					<li>Bigger pool of items: such as weapons, armor, potions etc.</li>
-            <li>Weapon types: different hit area (aoe).</li>
-            <li>More status elements: buffs, debuffs etc.</li>
-            <li>Spells: Summoning spells, mines, create walls, dig down (i.e. using shovel), ankth (respawn).</li>
-  					<li>Effects and animations.</li>
-  					<li>Different enemy types and more diverse enemy behaviour.</li>
-            <li>More diverse array of special rooms.</li>
-            <li>Sound effects/music.</li>
-            <li>Character selection: Player can select from premade characters, who all have different starting gear and conditions.</li>
-            <li>Polished sprites.</li>
-            <li>Background story.</li>
-            <li>Tutorial</li>
-
-            </br>
-
-            <li class="big">Gameplay changes</li>
-            <li>Slow projectiles.</li>
-            <li>Persistance: Chance to find a bank room or something similar.</li>
-            <li>Randomized effects on each dungeon level: For example chance to do double damage or ignite actors.</li>
-            <li>Wells, statues &amp; shrines: randomly generated buffs and boosts.</li>
-            <li>Enemy spawners</li>
-  				</ul>
-
-  				<br>
-
-          <hr class="hr2">
-  				<h3>Where can I get it?</h3>
-  				<p>Code is freely available as open source: <a href="https://github.com/Baserfaz/Roguelike">here</a>
-          <br>Playable build can be downloaded <a href="https://github.com/Baserfaz/Roguelike/raw/master/Builds/Roguelike.zip">here</a></p>
-  				<hr class="hr2">
-        </div>
-
-        <div class="grid-50 project-image">
-          <img src="images/rnew1.png" alt="New screenshot of the game. 4.2.2017"></img>
-          <p class="caption">Screenshot #1: current in-game (updated 4.2.2017)</p>
-          <img src="images/roguelite_img_1.PNG" alt="Old Screenshot of the game."></img>
-          <p class="caption">Screenshot #2: old mainmenu (updated 6.1.2017)</p>
-          <img src="images/roguelite_img_2.PNG" alt="Old Screenshot of the game."></img>
-          <p class="caption">Screenshot #3: old in-game (updated 6.1.2017)</p>
-          <img src="images/roguelite_img_3.PNG" alt="Old Screenshot of the game."></img>
-          <p class="caption">Screenshot #4: old in-game (updated 6.1.2017)</p>
-          <img src="images/roguelite_img_4.PNG" alt="Old Screenshot of the game."></img>
-          <p class="caption">Screenshot #5: old in-game (updated 6.1.2017)</p>
-        </div>
+				<div class="grid-50 project-image">
+					<h3>Screenshots</h3>
+					<img src="images/adv_01.PNG" alt="Adventurer - lobby"></img>
+					<p class="caption">Screenshot of the lobby (updated 20.7.2017)</p>
+					<img src="images/adv_02.PNG" alt="Adventurer - Dungeon screenshot - 1"></img>
+					<p class="caption">Gameplay: dungeon generation - 1</p>
+					<img src="images/adv_03.PNG" alt="Adventurer - Dungeon screenshot - 2"></img>
+					<p class="caption">Gameplay: dungeon generation - 2</p>
+				</div>
 
 			</div>
 
+			<!-- project01 -->
+			<div class="grid-100 grid-parent content" id="project01">
 
+				<div class="grid-100 project-name">
+					<h2>Roguelike RPG</h2>
+					<p class="shady">Project name: Roguelike (name not yet decided)</p>
+					<p class="shady">Version: extremely early</p>
+				</div>
 
-			<div class="grid-100 content">
-				<h2>Older projects</h2>
-				<p>My older projects can be found at <a href="https://github.com/Baserfaz" target="_blank">GitHub</a>.</p>
+        		<div class="grid-50">
+
+					<h3>Introduction</h3>
+
+					<p style="color: red">Project is not in active development as of 20.7.2017.</p>
+
+					<p>This game is a roguelike RPG, where the player dwells in randomly generated dungeons slaying monsters, gathering loot and trying to survive.
+					It's in very early stage, where some 'basic' stuff, such as rough dungeon generation, are implemented.</p>
+
+          			<p>Game is created by using Unity3D 5.5 and C#. Graphics are done with Pyxel.edit.</p>
+
+  					<h3>Current status</h3>
+
+  					<ul>
+            			<li class="big">Main Features</li>
+  						<li>Random dungeon generation: Generates dungeon layouts automatically. Multiple algorithms, which are pretty rough though.</li>
+  						<li>Tilesystem: Creates seamless graphics using a tilesystem.</li>
+            			<li>Line of sight system</li>
+            			<li>Image parser: Generates dungeons and special rooms using hand drawn images. Supports all mechanics such as doors, walls, enemies, items etc.</li>
+
+            			</br>
+
+            			<li class="big">Graphics</li>
+            			<li>Pixelart graphics: Tiles are 16x16 (might get converted to 32x32) and are created by hand using Pyxel edit software.</li>
+
+            			</br>
+
+						<li class="big">Tech</li>
+						<li>Smooth movement &amp; attack: uses vector.lerp.</li>
+						<li>Every actor moves on their own turn.</li>
+						<li>"Gamejuice": screenshake, lerps etc.</li>
+
+            			</br>
+
+						<li class="big">Audio</li>
+						<li>Added rudimentary soundeffects: used <a href="http://www.bfxr.net/">bfxr</a></li>
+
+            			</br>
+
+						<li class="big">Actors</li>
+						<li>Basic enemy AI: Enemies follow player and use melee attacks.</li>
+						<li>Player has slots for armor, weapon, spell and usable items.</li>
+						<li>Enemy types: normal melee, flying enemies (can't trigger traps), static enemies (immovable).</li>
+						<li>Bosses: special spell combinations.</li>
+
+						</br>
+
+						<li class="big">GUI and input</li>
+						<li>Keypad and Mouse input: Can play with mouse and keyboard.</li>
+						<li>Mouse GUI: Can click/hover on GUI elements.</li>
+						<li>Spell range and spell AOE: Show valid tiles.</li>
+						<li>Player pathfinding: Uses A* search algorithm.</li>
+
+						</br>
+
+						<li class="big">Gameplay related features</li>
+						<li>Special rooms: With img to dungeon system you can create your own dungeon layouts. For example shops, boss rooms, monster closets etc.</li>
+						<li>Loot rarity mechanics/probability calculations: Items come in four different levels (normal, magical, rare, legendary).</li>
+						<li>Exp system: Standard leveling system.</li>
+						<li>Traps: Floor spikes that hurt actors.</li>
+						<li>Effect system: Allows heal/damage/buffs/debuffs over time for all actors in the dungeon.</li>
+
+					</ul>
+
+					<h3>Under development</h3>
+
+  					<ul>
+						<li class="big">Content</li>
+  						<li>Bigger pool of items: such as weapons, armor, potions etc.</li>
+            			<li>Weapon types: different hit area (aoe).</li>
+            			<li>More status elements: buffs, debuffs etc.</li>
+            			<li>Spells: Summoning spells, mines, create walls, dig down (i.e. using shovel), ankth (respawn).</li>
+  						<li>Effects and animations.</li>
+  						<li>Different enemy types and more diverse enemy behaviour.</li>
+            			<li>More diverse array of special rooms.</li>
+						<li>Sound effects/music.</li>
+						<li>Character selection: Player can select from premade characters, who all have different starting gear and conditions.</li>
+						<li>Polished sprites.</li>
+						<li>Background story.</li>
+						<li>Tutorial</li>
+
+            			</br>
+
+						<li class="big">Gameplay changes</li>
+						<li>Slow projectiles.</li>
+						<li>Persistance: Chance to find a bank room or something similar.</li>
+						<li>Randomized effects on each dungeon level: For example chance to do double damage or ignite actors.</li>
+						<li>Wells, statues &amp; shrines: randomly generated buffs and boosts.</li>
+						<li>Enemy spawners</li>
+  					</ul>
+
+					<br>
+
+          			<hr class="hr2">
+  					<h3>Where can I get it?</h3>
+  					<p>Code is freely available as open source: <a href="https://github.com/Baserfaz/Roguelike">here</a>
+          			<br>Playable build can be downloaded <a href="https://github.com/Baserfaz/Roguelike/raw/master/Builds/Roguelike.zip">here</a></p>
+					<hr class="hr2">
+        		</div>
+
+				<div class="grid-50 project-image">
+					<h3>Screenshots</h3>
+					<img src="images/rnew1.png" alt="New screenshot of the game. 4.2.2017"></img>
+					<p class="caption">Screenshot #1: current in-game (updated 4.2.2017)</p>
+					<img src="images/roguelite_img_1.PNG" alt="Old Screenshot of the game."></img>
+					<p class="caption">Screenshot #2: old mainmenu (updated 6.1.2017)</p>
+					<img src="images/roguelite_img_2.PNG" alt="Old Screenshot of the game."></img>
+					<p class="caption">Screenshot #3: old in-game (updated 6.1.2017)</p>
+					<img src="images/roguelite_img_3.PNG" alt="Old Screenshot of the game."></img>
+					<p class="caption">Screenshot #4: old in-game (updated 6.1.2017)</p>
+					<img src="images/roguelite_img_4.PNG" alt="Old Screenshot of the game."></img>
+					<p class="caption">Screenshot #5: old in-game (updated 6.1.2017)</p>
+				</div>
 			</div>
 
 			<!-- Footer -->
 			<div class="grid-100 footer">
 				<hr>
 				<p>Copyright &copy; 2017 Heikki Heiskanen</p>
-				<a href="https://baserfaz.github.io/PortfolioPage/" target="_blank"><i class="fa fa-home fa-fw"></i> My homepage</a><br>
+				<a href="http://www.heiskanenheikki.fi" target="_blank"><i class="fa fa-home fa-fw"></i> My homepage</a><br>
 				<a href="http://baserfaz.github.io/unityBlog/" target="_blank"><i class="fa fa-pencil-square-o fa-fw"></i> My unity 5 Blog</a><br>
 				<a href="https://github.com/Baserfaz" target="_blank"><i class="fa fa-github fa-fw"></i> Me on GitHub</a><br>
 				<a href="https://twitter.com/Baserfaz" target="_blank"><i class="fa fa-twitter fa-fw"></i> @Baserfaz</a><br>
 				<a href="http://www.twitch.tv/baserfaz" target="_blank"><i class="fa fa-twitch fa-fw"></i> Twitch</a>
 				<p class="ack">Background from <a href="http://www.subtlepatterns.com">Subtlepatterns.com</a> &amp; Using <a href="http://unsemantic.com/">Unsemantic</a> framework</p>
 			</div>
-
 		</div>
-  </body>
+  	</body>
 </html>
